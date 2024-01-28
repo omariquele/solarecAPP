@@ -73,7 +73,7 @@ import { useAppStore } from 'stores/app-store'
 
 
 import RechargeResultsComponent from "components/pre_pago/RechargeResultsComponent.vue";
-import PaymentsOptionsComponent from "../../components/base/PaymentsOptionsComponent.vue";
+//import PaymentsOptionsComponent from "../../components/base/PaymentsOptionsComponent.vue";
 
 export default defineComponent({
   name: 'ConfirmPayRechargePage',
