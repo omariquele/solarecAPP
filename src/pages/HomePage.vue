@@ -2,7 +2,7 @@
   <q-page class="home-background">
     <div class="buttons-container">
       <q-card-section>
-  <span style="font-size: 24px;font-weight: bold;">Menu</span> <!-- Adjust font-size as needed -->
+  <span style="font-size: 24px;font-weight: bold;">Menu </span> <!-- Adjust font-size as needed -->
   <span
     style="background-color: rgba(210, 128, 5, 0.3); padding: 5px 5px; border-radius: 10px; font-size: 24px;font-weight: bold;">
     Principal

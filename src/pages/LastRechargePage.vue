@@ -7,7 +7,7 @@
           style="max-width: 500px; margin: 0 auto"
         >
           <q-card-section>
-            <span style="font-size: 24px; font-weight: bold">Última</span>
+            <span style="font-size: 24px; font-weight: bold">Última </span>
             <span
               style="
                 background-color: rgba(210, 128, 5, 0.3);
@@ -28,6 +28,8 @@
         class="q-gutter-md"
       >
         <q-input
+          color="black"
+          bg-color="grey-1"
           outlined
           v-model="meter_number"
           type="number"

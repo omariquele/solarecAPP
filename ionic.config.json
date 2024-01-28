@@ -1,0 +1,7 @@
+{
+  "name": "solarec-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "custom"
+}

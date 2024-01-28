@@ -7,7 +7,7 @@
           style="max-width: 500px; margin: 0 auto"
         >
           <q-card-section>
-            <span style="font-size: 24px; font-weight: bold">Compra</span>
+            <span style="font-size: 24px; font-weight: bold">Compra </span>
             <span
               style="
                 background-color: rgba(210, 128, 5, 0.3);
@@ -23,6 +23,8 @@
 
           <q-form @submit="onSubmit" class="q-gutter-md">
             <q-input
+              color="black"
+              bg-color="grey-1"
               outlined
               v-model="contador"
               type="number"
@@ -37,6 +39,8 @@
             />
 
             <q-input
+              color="black"
+              bg-color="grey-1"
               outlined
               type="number"
               v-model="amount"
