@@ -1,7 +1,7 @@
 {
   "name": "solarec-app",
   "version": "0.0.1",
-  "description": "Apliacao para compra de Energia Solar do FUNAE",
+  "description": "Aplicação para compra de Energia Solar do FUNAE",
   "productName": "Solarec App",
   "author": "Olegario Mariquele <teddy.mariquele@gmail.com>",
   "private": true,
