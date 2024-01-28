@@ -11,7 +11,8 @@
     "format": "prettier --write \"**/*.{js,vue,scss,html,md,json}\" --ignore-path .gitignore",
     "test": "echo \"No test specified\" && exit 0",
     "dev": "quasar dev",
-    "build": "quasar build"
+    "build": "quasar build",
+    "deploy": "push-dir --dir=dist/spa --remote=gh-pages --branch=master"
   },
   "dependencies": {
     "@quasar/extras": "^1.16.4",
@@ -29,6 +30,7 @@
     "eslint-plugin-vue": "^9.0.0",
     "postcss": "^8.4.14",
     "prettier": "^2.5.1",
+    "push-dir": "^0.4.1",
     "workbox-build": "^7.0.0",
     "workbox-cacheable-response": "^7.0.0",
     "workbox-core": "^7.0.0",
