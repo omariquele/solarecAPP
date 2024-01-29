@@ -1,5 +1,7 @@
 <template>
-  <q-page class="home-background">
+  <q-page class="content-container">
+    <BgImageComponent />
+
     <div class="buttons-container">
       <q-card-section>
   <span style="font-size: 24px;font-weight: bold;">Menu </span> <!-- Adjust font-size as needed -->
@@ -14,7 +16,7 @@
         to="/buy-electricity"
         unelevated
         label="Comprar Energia"
-        class="full-width bg-black text-white"
+        class="full-width bg-black text-white btn-outline"
         color="orange"
         rounded
         size="xl"
@@ -35,11 +37,16 @@
   </q-page>
 </template>
 
+
 <script>
 import { defineComponent } from "vue";
+import BgImageComponent from "components/BgImageComponent.vue"; // Update this path based on your directory structure
 
 export default defineComponent({
   name: "HomePage",
+  components: {
+    BgImageComponent, // Registering the component
+  },
   // ... other options if necessary ...
 });
 </script>
@@ -49,23 +56,27 @@ export default defineComponent({
   width: 100%;
 }
 
-.home-background {
-  display: flex; /* Enable Flexbox */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  text-align: center; /* Center text for all child elements */
-  background: url("images/funaebg.png") no-repeat center center;
-  background-size: cover; /* Cover the entire page */
-  min-height: 100vh; /* Ensure it covers full viewport height */
-}
 
 .buttons-container {
   display: flex;
   flex-direction: column; /* Stack buttons vertically */
   gap: 16px; /* Space between buttons, similar to 'q-gutter-y-md' */
   max-width: 500px; /* Same as your previous max-width */
-  width: 100%; /* Make it full width */
+  width: 70%; /* Make it full width */
+  margin: 0 auto; /* Centers horizontally in the content-container */
 }
 
+.content-container {
+  position: relative;
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  text-align: center;
+  min-height: 100vh; /* Takes the full height of the viewport */
+}
+.btn-outline {
+  border: 1px solid black; /* Adjust thickness as needed */
+  position: relative;
+}
 /* Add your other styles here */
 </style>

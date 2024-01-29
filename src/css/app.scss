@@ -1,1 +1,7 @@
 // app global css in SCSS form
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');
+
+// Fonte aplicada em toda a aplicacao
+* {
+  font-family: 'Barlow', sans-serif;
+}

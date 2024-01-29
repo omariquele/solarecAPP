@@ -33,6 +33,7 @@ module.exports = configure(function (/* ctx */) {
 
       'axios',
       'addressbar-color',
+      'global-components',
     ],
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#css

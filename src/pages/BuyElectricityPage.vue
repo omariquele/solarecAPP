@@ -1,27 +1,15 @@
 <template>
   <q-layout>
     <q-page-container>
-      <q-page class="home-background">
-        <div
-          class="q-pa-lg q-gutter-y-lg"
-          style="max-width: 500px; margin: 0 auto"
-        >
-          <q-card-section>
-            <span style="font-size: 24px; font-weight: bold">Compra </span>
-            <span
-              style="
-                background-color: rgba(210, 128, 5, 0.3);
-                padding: 5px 5px;
-                border-radius: 10px;
-                font-size: 24px;
-                font-weight: bold;
-              "
-            >
-              Energia
-            </span>
-          </q-card-section>
+      <q-page class="content-container">
+           <BgImageComponent />
 
-          <q-form @submit="onSubmit" class="q-gutter-md">
+            <q-card-section class="card-section">
+             <span class="section-title compra-title">Compra</span>
+             <span class="section-subtitle">Energia</span>
+            </q-card-section>
+
+          <q-form @submit="onSubmit" class="form-container">
             <q-input
               color="black"
               bg-color="grey-1"
@@ -78,7 +66,7 @@
               />
             </div>
           </q-form>
-        </div>
+
       </q-page>
     </q-page-container>
   </q-layout>
@@ -89,9 +77,11 @@ import { defineComponent, ref } from "vue";
 import { useRouter } from "vue-router";
 import { useQuasar, QSpinnerGears } from "quasar"; // Import useQuasar
 import { useAppStore } from "stores/app-store";
+import BgImageComponent from "components/BgImageComponent.vue"; // Update this path based on your directory structure
+
 
 export default defineComponent({
-  name: "BuyElectricityPage",
+  name: "BuyElectricityPage, BgImageComponent",
   setup() {
     const $q = useQuasar(); // Use useQuasar
     const appStore = useAppStore();
@@ -208,17 +198,49 @@ export default defineComponent({
 </script>
 
 <style>
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  text-align: center;
+  min-height: 100vh;
+}
+
+.card-section {
+  margin-bottom: 20px; /* Add space between card-section and form */
+}
+
+.section-title,
+.section-subtitle {
+  font-size: 24px;
+  font-weight: bold;
+  background-color: rgba(210, 128, 5, 0.3);
+  padding: 5px 5px;
+  border-radius: 10px;
+}
+
+.compra-title {
+  /* Add specific styles for "Compra" */
+  font-size: 28px; /* Slightly larger */
+  font-weight: bold; /* Make it bold */
+  color: #000; /* Set the color */
+  background-color: white
+}
+
+.section-subtitle {
+  margin-left: 10px; /* Add space between titles */
+}
+
+.form-container {
+  width: 85%;
+  max-width: 500px; /* Adjust as needed */
+  margin: 0 auto;
+}
+
 .full-width {
   width: 100%;
 }
-
-.home-background {
-  display: flex; /* Enable Flexbox */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  text-align: center; /* Center text for all child elements */
-  background: url("images/funaebg.png") no-repeat center center;
-  background-size: cover; /* Cover the entire page */
-  min-height: 100vh; /* Ensure it covers full viewport height */
-}
 </style>
+
+
