@@ -19,7 +19,7 @@ export default defineComponent({
 
     const imageStyle = computed(() => ({
       height: '100%',
-      opacity: '0.8',
+      opacity: '0.9',
       width: `${quasarInstance.screen.width > 500 && quasarInstance.screen.width < 1400 ? 135 : quasarInstance.screen.width > 1400 ? 122 : 100}%`,
     }));
 
